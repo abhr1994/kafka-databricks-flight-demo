@@ -3,4 +3,4 @@ This repo consists of code to ingest data from Flights API into kafka and analys
 
 ## Flow Diagram
 
-![Alt text](flowdiagram.png?raw=true "Flow Diagram")
+![Alt text](design.png?raw=true "Flow Diagram")

@@ -4,7 +4,7 @@ import json
 import threading, logging, time
 import multiprocessing
 import argparse
-# from confluent_kafka import Producer
+#from confluent_kafka import Producer
 from kafka import KafkaProducer
 import configparser
 
@@ -82,8 +82,8 @@ def run_tasks(config):
         t.start()
 
     # Total Runtime
-    time.sleep(config['DEFAULT']['runtime'])
-    print("producer shutdown after {runtime} seconds".config['DEFAULT']['runtime'])
+    time.sleep(int(config['DEFAULT']['runtime'].strip()))
+    print("producer shutdown after {runtime} seconds".format(runtime=config['DEFAULT']['runtime']))
 
     for task in tasks:
         print(f"stopping task {task}")
